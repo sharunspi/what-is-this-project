@@ -10,15 +10,18 @@ function createWindow () {
     width: 800,
     height: 600,
     webPreferences: {
-      preload: path.join(__dirname, 'script.js')
+      nodeIntegration:true,
+      webSecurity:false,
+      enableRemoteModule:true,
+      contextIsolation:false
     }
   })
 
   // and load the index.html of the app.
   mainWindow.loadFile('index.html')
-
+  mainWindow.setMenu(null)
   // Open the DevTools.
-  // mainWindow.webContents.openDevTools()
+  mainWindow.webContents.openDevTools()
 }
 
 // This method will be called when Electron has finished
