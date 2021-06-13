@@ -3,13 +3,33 @@ body{
     color: whitesmoke;
 }
 .btn{
-    padding: 4px;
+    padding: 6px 12px;
     border-radius: 4px;
     font-size: 1.2em;
     margin-top: 50px;
     margin-left: 100px;
+    text-decoration: none;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    touch-action: manipulation;
+    cursor: pointer;
+    border: 1px solid transparent;
+    user-select: none;
 }
 .btn-choose{
     background-color: tomato;
     color: whitesmoke;
+}
+.btn-choose:hover{
+    background-color: rgb(245, 69, 38);
+    color: whitesmoke; 
+}
+li{
+    list-style-type:none;
+    margin-top: 10px;
+}
+#result{
+    margin-top: 40px;
+    margin-left: 12px;
 }
