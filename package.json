@@ -1,0 +1,23 @@
+{
+  "name": "what-is-this-project",
+  "version": "1.0.0",
+  "description": "find all programming languages and frameworks used",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sharunspi/what-is-this-project.git"
+  },
+  "author": "sharunspi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sharunspi/what-is-this-project/issues"
+  },
+  "homepage": "https://github.com/sharunspi/what-is-this-project#readme",
+  "dependencies": {
+    "electron": "^13.1.2"
+  }
+}
