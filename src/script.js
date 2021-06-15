@@ -1,6 +1,7 @@
 const {dialog} = require('electron').remote
 var result = document.getElementById('result')
 const path = require('path')
+let iconsarea = ''
 const fs = require('fs')
 let pathFolder,newPath
 let config = {
@@ -70,6 +71,7 @@ function lookAllFiles(files){
             config.nodeProject = true
             let project = document.getElementById('ProjectType')
             project.innerHTML = 'Node'
+            iconsarea+="<img src='./images/js-format.png' />"
         }
         if(res =='package.json'){
             console.log('found node file')
@@ -83,13 +85,18 @@ function lookAllFiles(files){
         if(res.includes('.html')){
             config.noOfHtmlFiles+= 1
         }
+        if(res == '.git'){
+            iconsarea+="<img src='./images/git.png' />"
+        }
     })
     let noOfJSFiles = document.getElementById('noOfJSFiles')
     let noOfHTMLFiles = document.getElementById('noOfHTMLFiles')
     let noOfImageFiles = document.getElementById('noOfImageFiles')
+    let pngarea = document.getElementsByClassName('icons-area')
     noOfHTMLFiles.html(config.noOfHtmlFiles)
     noOfJSFiles.html(config.noOfJsFiles)
     noOfImageFiles.html(config.noOfImageFiles)
+    pngarea[0].html(iconsarea)
 }
 
 
