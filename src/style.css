@@ -58,3 +58,7 @@ li{
     color: teal;
     padding: 4px 14px;
 }
+.col-12{
+    width: 100%;
+    margin: 2px;
+}
